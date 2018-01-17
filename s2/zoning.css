@@ -1,0 +1,53 @@
+*{
+	margin: 0;padding: 0;
+}
+.menu{
+	width: 100%;
+	height: 50px;
+	background: black;
+}
+
+.slider{
+	width: 1024px;
+	height: 420px;
+	
+	margin: auto;
+}
+
+.produit{
+	width: 1024px;
+	height: 340px;
+	
+	margin: auto;
+
+}
+.slider img{
+	width: 100%;
+}
+.e{
+	width: 320px;
+	height: 290px;
+	
+	display: inline-block;
+	margin: 9px;
+}
+.e img{
+	width: 100%;
+}
+
+.contenu{
+	width: 1024px;
+	height: 400px;
+	background: #EEE;
+	margin: auto;
+	padding: 20px;
+}
+.contenu p{
+	columns: 3;
+	text-align: justify;
+	column-gap: 30px;
+}
+
+
+
+
