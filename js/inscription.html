@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>inscription en ligne </title>
+</head>
+<body>
+
+<form action="reception.html">
+	<table align="center" id="tab">
+		<tr>
+			<td>Email : </td>
+			<td><input type="text" id="email"></td>
+		</tr>
+		<tr>
+			<td>Mot de passe : </td>
+			<td><input type="password" id="passe"></td>
+		</tr>
+
+		<tr>
+			<td>Confirmation du mot de passe : </td>
+			<td><input type="password" id="conf"></td>
+		</tr>
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+			
+				<label><input type="radio" id="homme" name="hf" value="homme"> Homme </label>
+
+				<label><input type="radio" id="femme" name="hf" value="femme">Femme
+			</label>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" onclick="validerTout()" id="ok" value="S'inscrire"></td>
+		</tr>
+
+
+	</table>
+</form>
+<script type="text/javascript">
+	function validerPasse () {
+		//recuperation des  champs : passe & conf
+cpasse=document.getElementById('passe');
+cconf=document.getElementById('conf');
+
+		//verifier si la valeur du mot de passe est vide on non
+if (cpasse.value=="") {
+alert('le mot de passe est obligatoire');
+	}else if(cpasse.value != cconf.value){
+alert('les deux mot de passe ne correspondent pas');
+	}
+
+}
+function validerEmail () {
+		//recuperation des  champs : passe & conf
+cemail=document.getElementById('email');
+
+
+if (cemail.value=="") {
+alert('le champs email  est obligatoire');
+	}
+
+}
+function validerHF () {
+		//recuperation des  champs : passe & conf
+cfemme=document.getElementById('femme');
+chomme=document.getElementById('homme');
+ctable=document.getElementById('tab');
+if (!cfemme.checked && ! chomme.checked) {
+alert('le champs sexe est  requis');
+
+}
+if (chomme.checked) {
+ctable.style.backgroundColor = 'blue';
+} 
+if(cfemme.checked){
+ctable.style.backgroundColor = 'green';
+
+}
+
+
+}
+function validerTout(){
+	validerEmail();
+	validerPasse();
+	validerHF()
+}
+</script>
+</body>
+</html>
