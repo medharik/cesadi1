@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>inscription en ligne</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<form>
+	<table border="0" align="center">
+		<tr>
+			<td>Email : </td>
+		<td><input type="email" id="email" > 
+			<span class="erreur" id="eremail">erreur le champ email est onbligatoire </span>
+		</td>
+		</tr>
+		<tr>
+			<td>Mot de passe : </td>
+			<td><input type="password" id="passe">
+				<span class="erreur" id="erpasse">Le mot de passe est obligatoire</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Confirmation du mot de passe : </td>
+			<td><input type="password" id="conf">
+			 <span id="erconf" class="erreur">
+			 	les 2 mots de passe ne correspondent pas 
+
+			 </span></td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td><input type="button" value="S'inscrire" onclick="valider()"></td>
+		</tr>
+
+
+	</table>
+
+
+</form>
+
+<script type="text/javascript">
+	function valideremail () {
+		//recuperer le champs email
+		 cemail=document.getElementById('email');
+		 //recuprer le champs d'erreur email
+		  eremail=document.getElementById('eremail');
+		//on verifie si sa valeur est vide ou non
+		if (cemail.value=="") {
+
+			eremail.style.display='inline';
+		}else{
+			eremail.style.display='none';
+		}
+	}
+
+		function validepasse () {
+		 cpasse=document.getElementById('passe');
+		 //recuprer le champs d'erreur email
+		  erpasse=document.getElementById('erpasse');
+		//on verifie si sa valeur est vide ou non
+		if (cpasse.value=="") {
+
+			erpasse.style.display='inline';
+		}else{
+			erpasse.style.display='none';
+		}
+	}
+
+
+function valideconf () {
+		 cconf=document.getElementById('conf');
+		 cpasse=document.getElementById('passe');
+		 //recuprer le champs d'erreur email
+		  erconf=document.getElementById('erconf');
+		//on verifie si sa valeur est vide ou non
+		if (cconf.value!=cpasse.value) {
+
+			erconf.style.display='inline';
+		}else{
+			erconf.style.display='none';
+		}
+	}
+	function valider () {
+		valideremail ();
+		 validepasse();
+		 valideconf ();
+	}
+</script>
+
+</body>
+</html>

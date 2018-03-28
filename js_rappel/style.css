@@ -1,0 +1,7 @@
+.erreur{
+color: red;
+background: grey;
+height: 20px;
+width: 100px;
+display: none;
+}
